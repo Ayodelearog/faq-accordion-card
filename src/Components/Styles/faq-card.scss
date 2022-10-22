@@ -1,0 +1,150 @@
+@import "./Variables/variables.scss";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    .main {
+        max-width: 375px;
+        min-height: 100vh;
+        overflow-y: auto;
+        background-image: linear-gradient(to bottom, $BG-violet, $BG-blue );
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+
+        .card-container {
+            max-width: 87%;
+            margin: auto;
+            background-color: white;
+            border-radius: 28px;
+            padding: 24px;
+            padding-bottom: 44px;
+            box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            0 12.5px 10px rgba(0, 0, 0, 0.06),
+            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+
+            .illustration-BG {
+                background: url("../images/bg-pattern-mobile.svg") center no-repeat;
+                max-width: 100%;
+                height: 104px;
+                position: relative;
+                top: -26px;
+                
+                
+                .illustration-board {
+                    background: url("../images/illustration-woman-online-mobile.svg") center no-repeat;
+                    min-width: 100%;
+                    height: 180px;
+                    position: relative;
+                    top: -106px;
+                    
+                }
+            }
+
+            .faq-area {
+                font-family: $Kumbh-sans;
+                text-align: left;
+                max-width: 100%;
+
+                .heading {
+                    text-align: center;
+                }
+
+                h1 {
+                    font-weight: 700;
+                    margin-bottom: 16px;
+                }
+
+                .p-group-arrow {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .content-list {
+                        list-style: none;
+
+                        P {
+                            font-size: $body-font-size; 
+                            color: $body-TextColor-inactive; 
+                            font-weight: 400;                
+                        }
+
+                        
+                        .p-div {
+                            border-bottom: 1px solid $line-divider;
+                            // padding-bottom: 20px;
+                            margin-top: 12px;
+
+                            .p-arrow {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: center;
+                                width: 100%;
+                                padding-bottom: 10px;
+                                
+
+                                span::before {
+                                    content: url("../images/icon-arrow-down.svg");
+                                   
+                                }
+                            }
+
+                            
+
+                            .span-click  {
+                                transform: rotateY(90deg);
+                            }
+
+                            .p-div-dropdown {
+                                max-width: 90%;
+                                padding-bottom: 20px;
+
+                                .dropdown {
+                                    list-style: none;
+
+                                    p {
+                                        color: $body-TextColor-dropdown
+                                    }
+                                }
+                            }
+
+                            // .p-arrow:focus {
+                            //     color: $bodyTextColor-active;
+                            // }
+
+                            
+        
+                                
+                        }
+
+                        .active-click {
+                            color: $bodyTextColor-active;
+                            font-weight: 700;
+                
+                        }
+                    
+                    }
+
+                    
+
+                    
+
+                    
+                }
+
+                
+            }
+
+            
+        }
+    }
+}
+
+

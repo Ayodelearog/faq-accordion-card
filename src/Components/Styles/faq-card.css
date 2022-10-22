@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* .main {
+  max-width: 375px;
+  min-height: 100vh;
+  overflow-y: auto;
+  background-image: linear-gradient(to bottom, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+* .main .card-container {
+  max-width: 87%;
+  margin: auto;
+  background-color: white;
+  border-radius: 28px;
+  padding: 24px;
+  padding-bottom: 44px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+* .main .card-container .illustration-BG {
+  background: url("../images/bg-pattern-mobile.svg") center no-repeat;
+  max-width: 100%;
+  height: 104px;
+  position: relative;
+  top: -26px;
+}
+* .main .card-container .illustration-BG .illustration-board {
+  background: url("../images/illustration-woman-online-mobile.svg") center no-repeat;
+  min-width: 100%;
+  height: 180px;
+  position: relative;
+  top: -106px;
+}
+* .main .card-container .faq-area {
+  font-family: "Kumbh Sans", sans-serif;
+  text-align: left;
+  max-width: 100%;
+}
+* .main .card-container .faq-area .heading {
+  text-align: center;
+}
+* .main .card-container .faq-area h1 {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+* .main .card-container .faq-area .p-group-arrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+* .main .card-container .faq-area .p-group-arrow .content-list {
+  list-style: none;
+}
+* .main .card-container .faq-area .p-group-arrow .content-list P {
+  font-size: 12px;
+  color: hsl(237deg, 12%, 33%);
+  font-weight: 400;
+}
+* .main .card-container .faq-area .p-group-arrow .content-list .p-div {
+  border-bottom: 1px solid hsl(240deg, 5%, 91%);
+  margin-top: 12px;
+}
+* .main .card-container .faq-area .p-group-arrow .content-list .p-div .p-arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+* .main .card-container .faq-area .p-group-arrow .content-list .p-div .p-arrow span::before {
+  content: url("../images/icon-arrow-down.svg");
+}
+* .main .card-container .faq-area .p-group-arrow .content-list .p-div .active-click {
+  color: hsl(238deg, 29%, 16%);
+  font-weight: 700;
+}
+* .main .card-container .faq-area .p-group-arrow .content-list .p-div .span-click {
+  transform: rotateY(90deg);
+}
+* .main .card-container .faq-area .p-group-arrow .content-list .p-div .p-div-dropdown {
+  max-width: 90%;
+  padding-bottom: 20px;
+}
+* .main .card-container .faq-area .p-group-arrow .content-list .p-div .p-div-dropdown .dropdown {
+  list-style: none;
+}
+* .main .card-container .faq-area .p-group-arrow .content-list .p-div .p-div-dropdown .dropdown p {
+  color: hsl(240deg, 6%, 50%);
+}/*# sourceMappingURL=faq-card.css.map */
