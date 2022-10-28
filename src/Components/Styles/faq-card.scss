@@ -6,143 +6,351 @@
     padding: 0;
     box-sizing: border-box;
 
-    .main {
-        max-width: 375px;
-        min-height: 100vh;
-        overflow-y: auto;
-        background-image: linear-gradient(to bottom, $BG-violet, $BG-blue );
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-
-        .card-container {
-            max-width: 87%;
+    @media only screen and (min-width: 375px) {
+        .main {
+            max-width: 375px;
+            min-height: 100vh;
+            overflow-y: auto;
+            background-image: linear-gradient(to bottom, $BG-violet, $BG-blue );
             margin: auto;
-            background-color: white;
-            border-radius: 28px;
-            padding: 24px;
-            padding-bottom: 44px;
-            box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-            0 12.5px 10px rgba(0, 0, 0, 0.06),
-            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-            0 100px 80px rgba(0, 0, 0, 0.12);
+            display: flex;
+            flex-direction: row;
+    
+            .card-container {
+                width: 87%;
+                // min-height: 70vh;
+                margin: auto;
+                background-color: white;
+                border-radius: 28px;
+                padding: 24px;
+                padding-bottom: 44px;
+                box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+    
 
-            .illustration-BG {
-                background: url("../images/bg-pattern-mobile.svg") center no-repeat;
-                max-width: 100%;
-                height: 104px;
-                position: relative;
-                top: -26px;
-                
-                
-                .illustration-board {
-                    background: url("../images/illustration-woman-online-mobile.svg") center no-repeat;
-                    min-width: 100%;
-                    height: 180px;
-                    position: relative;
-                    top: -106px;
-                    
-                }
-            }
+                #art {
 
-            .faq-area {
-                font-family: $Kumbh-sans;
-                text-align: left;
-                max-width: 100%;
-
-                .heading {
-                    text-align: center;
-                }
-
-                h1 {
-                    font-weight: 700;
-                    margin-bottom: 16px;
-                }
-
-                .p-group-arrow {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-
-                    .content-list {
-                        list-style: none;
-
-                        P {
-                            font-size: $body-font-size; 
-                            color: $body-TextColor-inactive; 
-                            font-weight: 400;                
-                        }
-
+                    .illustration-BG {
+                        // img {
+                        //     width: 80px;
+                        //     height: 80px;
+                        // }
+    
+                        background: url("../images/bg-pattern-mobile.svg") center no-repeat;
+                        max-width: 100%;
+                        height: 104px;
+                        position: relative;
+                        top: -26px;
                         
-                        .p-div {
-                            border-bottom: 1px solid $line-divider;
-                            // padding-bottom: 20px;
-                            margin-top: 12px;
-
-                            .p-arrow {
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: space-between;
-                                align-items: center;
-                                width: 100%;
-                                padding-bottom: 10px;
-                                
-
-                                span::before {
-                                    content: url("../images/icon-arrow-down.svg");
-                                   
-                                }
-                            }
-
+                        
+                        .illustration-board {
+                            background: url("../images/illustration-woman-online-mobile.svg") center no-repeat;
+                            min-width: 100%;
+                            height: 180px;
+                            position: relative;
+                            top: -106px;
                             
-
-                            .span-click  {
-                                transform: rotateY(90deg);
+                        }
+                    }
+                }
+    
+                .faq-area {
+                    font-family: $Kumbh-sans;
+                    text-align: left;
+                    max-width: 100%;
+                    
+    
+                    .heading {
+                        text-align: center;
+                    }
+    
+                    h1 {
+                        font-weight: 700;
+                        margin-bottom: 16px;
+                    }
+    
+                    .p-group-arrow {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        
+    
+                        #content-list {
+                            list-style: none;
+    
+                            P {
+                                font-size: $body-font-size; 
+                                color: $body-TextColor-inactive; 
+                                font-weight: 400;                
                             }
-
-                            .p-div-dropdown {
-                                max-width: 90%;
-                                padding-bottom: 20px;
-
-                                .dropdown {
-                                    list-style: none;
-
+    
+                            
+                            .p-div {
+                                // position: relative;
+                                // display: block;
+                                border-bottom: 1px solid $line-divider;
+                                // padding-bottom: 20px;
+                                margin-top: 12px;
+    
+                                .p-arrow {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    width: 100%;
+                                    padding-bottom: 10px;
+                                    z-index: inherit;
+                                    
                                     p {
-                                        color: $body-TextColor-dropdown
+                                        font-size: $body-font-size;
+                                    }
+    
+                                    span::before {
+                                        content: url("../images/icon-arrow-down.svg");
+                                       
                                     }
                                 }
-                            }
-
-                            // .p-arrow:focus {
-                            //     color: $bodyTextColor-active;
-                            // }
-
-                            
-        
+    
+    
+                                .p-div-dropdown {
+                                    display: none;
+                                    max-width: 90%;
+                                    padding-bottom: 20px;
+                                    
+    
+                                    .dropdown {
+                                        list-style: none;
+    
+                                        p {
+                                            color: $body-TextColor-dropdown
+                                            
+                                        }
+                                    }
+                                }
+    
                                 
-                        }
-
-                        .active-click {
-                            color: $bodyTextColor-active;
-                            font-weight: 700;
-                
-                        }
+            
+                                    
+                            }
+    
+                            .active-click {
+                                font-size: $body-font-size;
+                                
+    
+                                .main-text  {
+                                    color: $bodyTextColor-active;
+                                    font-weight: 700;
+                                }
+    
+                                span  {
+                                    transform: rotate(180deg);
+                                    transition: ease-in-out .6s;
+                                }
+    
+                                .p-div-dropdown {
+                                    display: block;
+                                    // transform: translateY(3px);
+                                    // transition: ease-in-out .9s;
+                                }
                     
+                            }
+                        
+                        }
+    
+                        
+    
+                        
+    
+                        
                     }
-
-                    
-
-                    
-
+    
                     
                 }
-
+    
                 
             }
+        }
+    }
 
-            
+    
+
+
+    @media only screen and (min-width: 1440px) {
+        
+        .main {
+            min-width: 1440px;
+            min-height: 100vh;
+            overflow-y: auto;
+            background-image: linear-gradient(to bottom, $BG-violet, $BG-blue );
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+    
+            .card-container {
+                width: 60%;
+                display: flex;
+                flex-direction: row;
+                // min-height: 95%;
+                margin: auto;
+                background-color: white;
+                border-radius: 28px;
+                padding: 64px;
+                
+                box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                0 12.5px 10px rgba(0, 0, 0, 0.06),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                0 100px 80px rgba(0, 0, 0, 0.12);
+    
+                #art {
+                    min-width: 60%;
+                    min-height: 100%;
+        
+                    
+                    .illustration-BG {
+                        background: url("../images/bg-pattern-desktop.svg") center no-repeat;
+                        background-size: cover;
+                        min-width: 140%;
+                        min-height: 140%;
+                        position: relative;
+                        top: 8px;
+                        left: -180px;
+                        
+                        
+                        .illustration-board {
+                            background: url("../images/illustration-woman-online-desktop.svg") center no-repeat;
+                            width: 20%;
+                            min-height: 100%;
+                            position: relative;
+                            top: -70px;
+                            
+                        }
+                    }
+                }
+    
+                .faq-area {
+                    font-family: $Kumbh-sans;
+                    text-align: left;
+                    max-width: 40%;
+                    
+    
+                    .heading {
+                        text-align: left;
+                    }
+    
+                    h1 {
+                        font-weight: 700;
+                        margin-bottom: 16px;
+                    }
+    
+                    .p-group-arrow {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        min-width: 100%;
+                        
+    
+                        .content-list {
+                            list-style: none;
+                            
+    
+                            P {
+                                font-size: $body-font-size; 
+                                color: $body-TextColor-inactive; 
+                                font-weight: 400;                
+                            }
+    
+                            
+                            .p-div {
+                                position: relative;
+                                display: block;
+                                border-bottom: 1px solid $line-divider;
+                                margin-top: 12px;
+                                
+    
+                                .p-arrow {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    width: 100%;
+                                    padding-bottom: 10px;
+                                    // z-index: inherit;
+                                    
+                                    p {
+                                        font-size: $body-font-size;
+                                    }
+    
+                                    span::before {
+                                        content: url("../images/icon-arrow-down.svg");
+                                       
+                                    }
+                                }
+    
+    
+                                .p-div-dropdown {
+                                    display: none;
+                                    max-width: 90%;
+                                    padding-bottom: 20px;
+                                    
+    
+                                    .dropdown {
+                                        list-style: none;
+    
+                                        p {
+                                            color: $body-TextColor-dropdown
+                                            
+                                        }
+                                    }
+                                }
+                                    
+                            }
+                            .p-div:hover {
+                                cursor: pointer;
+                            }
+
+    
+                            .active-click {
+                                font-size: $body-font-size;
+                                
+    
+                                .main-text  {
+                                    color: $bodyTextColor-active;
+                                    font-weight: 700;
+                                }
+    
+                                span  {
+                                    transform: rotate(180deg);
+                                    transition: ease-in-out .6s;
+                                }
+    
+                                .p-div-dropdown {
+                                    display: block;
+                                    // transform: translateY(3px);
+                                    // transition: ease-in-out .9s;
+                                }
+                    
+                            }
+                        
+                        }
+    
+                        
+    
+                        
+    
+                        
+                    }
+    
+                    
+                }
+    
+                
+            }
         }
     }
 }

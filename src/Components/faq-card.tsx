@@ -1,24 +1,24 @@
-import { useState } from "react";
 import "../Components/Styles/faq-card.scss";
 
 
 export const FaqCard = () => {
-    const [hideDropdown, setHideDropdown] = useState(true);
 
-
+    
 
     const handleDropdown = (e: React.BaseSyntheticEvent) => {
-        console.log(e.target.childNodes)
-        
-        e.target.classList.toggle("active-click");
-        // e.target.classList.toggle("span-click")
-        setHideDropdown(!hideDropdown)
-        
-        // e.target.classList.remove("p-div-dropdown")
-        // console.log("hhh")
-        console.log(hideDropdown)
+        e.currentTarget.classList.toggle("active-click");
     }
 
+
+    // const contentList = document.getElementById("content-list");
+
+    //     const pDivs = contentList?.getElementsByClassName("p-div");
+
+    //     if (pDivs != undefined) {
+    //         for (let i = 0; i < pDivs?.length; i++) {
+    //             pDivs[i].addEventListener("click", handleDropdown())
+    //         }
+    //     }
 
 
 
@@ -26,28 +26,29 @@ export const FaqCard = () => {
     return (
         <div className="main">
             <div className="card-container">
-                <div className="illustration-BG">
-                    {/* <img src="./images/bg-pattern-mobile.svg" alt="" /> */}
-                    <div className="illustration-board"></div>
+                <div id="art">
+                    <div className="illustration-BG">
+                        <div className="illustration-board"></div>
+                    </div>
                 </div>
                 
 
                 <div className="faq-area">
                     <div className="heading"><h1>FAQ</h1></div>
 
-                    <div className="p-group-arrow" onClick={(e) => handleDropdown(e)}>
-                        <ul className="content-list">
+                    <div className="p-group-arrow" >
+                        <ul id="content-list">
                             <li>
-                                <div className="p-div" >
-                                    <div className="p-arrow" ><p>How many team members can I invite?</p> <span></span></div>
-                                    {!hideDropdown && <div className="p-div-dropdown">
+                                <div className="p-div" onClick={(e) => handleDropdown(e)}>
+                                    <div className="p-arrow" ><p className="main-text">How many team members can I invite?</p> <span></span></div>
+                                    <div className="p-div-dropdown">
                                     <ul className="dropdown">
                                         <li>
                                             <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
                                             team members for the Premium plan.</p>
                                         </li>
                                     </ul>
-                                    </div>}
+                                    </div>
                                     
                                 </div>
                                 
@@ -57,22 +58,22 @@ export const FaqCard = () => {
                         
                             <li>
                                 <div className="p-div" onClick={(e) => handleDropdown(e)}>
-                                    <div className="p-arrow"><p>What is the maximum file upload size?</p> <span></span></div>
-                                    {!hideDropdown && <div className="p-div-dropdown">
+                                    <div className="p-arrow"><p className="main-text">What is the maximum file upload size?</p> <span></span></div>
+                                    <div className="p-div-dropdown">
                                         <ul className="dropdown">
                                             <li>
                                                 <p>No more than 2GB. All files in your account must fit your allotted storage space.</p> 
                                             </li>
                                         </ul>
-                                    </div>}
+                                    </div>
                                 </div>
                             </li>
                         
                             
                         
                             <li>
-                                <div className="p-div">
-                                    <div className="p-arrow"><p>How do I reset my password?</p> <span></span></div>
+                                <div className="p-div" onClick={(e) => handleDropdown(e)}>
+                                    <div className="p-arrow"><p className="main-text">How do I reset my password?</p> <span></span></div>
                                     <div className="p-div-dropdown">
                                     <ul className="dropdown">
                                         <li>
@@ -87,8 +88,8 @@ export const FaqCard = () => {
                             
                         
                             <li>
-                                <div className="p-div">
-                                    <div className="p-arrow"><p>Can I cancel my subscription?</p> <span></span></div>
+                                <div className="p-div" onClick={(e) => handleDropdown(e)}>
+                                    <div className="p-arrow"><p className="main-text">Can I cancel my subscription?</p> <span></span></div>
                                     <div className="p-div-dropdown">
                                     <ul className="dropdown">
                                         <li>
@@ -102,8 +103,8 @@ export const FaqCard = () => {
                             
                         
                             <li>
-                                <div className="p-div">
-                                    <div className="p-arrow"><p>Do you provide additional support?</p> <span></span></div>
+                                <div className="p-div" onClick={(e) => handleDropdown(e)}>
+                                    <div className="p-arrow"><p className="main-text">Do you provide additional support?</p> <span></span></div>
                                     <div className="p-div-dropdown">
                                     <ul className="dropdown">
                                         <li>
